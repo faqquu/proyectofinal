@@ -1,0 +1,49 @@
+/* .custom-control-input:not(:checked) ~ .custom-control-label::before {
+  background-color: blue; 
+  border-color: yellow;  
+  border-radius: 3px;     
+}
+
+.custom-control-input:checked ~ .custom-control-label::before {
+    background-color: red;  
+    border-color: green;  
+    border-radius: 3px; 
+}
+
+.checkbox-outside-card.custom-control-input:not(:checked) ~ .custom-control-label::after {
+  background-color: #fff; 
+  border: 2px solid purple;
+  border-radius: 3px; 
+}
+
+.checkbox-outside-card.custom-control-input:checked ~ .custom-control-label::after {
+  background-color: pink; 
+  border: 2px solid violet; 
+  border-radius: 3px; 
+}  */
+
+.card-checkbox.custom-control-input:not(:checked) ~ .custom-control-label::before {
+  background-color: blue; /* Change the background color of the toggle container  when it is not checked */
+  border-color: yellow; /* Change the border color of the toggle container when it is not checked */
+}
+
+.card-checkbox.custom-control-input:checked ~ .custom-control-label::before {
+    background-color: red; /* Change the color of the toggle container when it is checked */
+    border-color: green; /* Change the border color of the toggle container when it is checked */
+}
+
+/* toggle knob */
+.card-checkbox.checkbox-outside-card.custom-control-input:not(:checked) ~ .custom-control-label::after {
+  background-color: #fff; /* Change the background color of the knob when it is checked */
+  border: 2px solid purple; /* Add a border if you prefer */
+}
+
+.card-checkbox.checkbox-outside-card.custom-control-input:checked ~ .custom-control-label::after {
+  background-color: pink; /* Change the background color of the knob when it is checked */
+  border: 2px solid violet; /* Add a border if you prefer */
+}
+
+.card-checkbox.custom-control-input:not(:checked) ~ .custom-control-label::before {
+  background-color: blue; /* Change the background color of the toggle when it is not checked */
+  border-color: yellow; /* Change the border color of the checkbox when it is not checked */
+}
