@@ -1,40 +1,22 @@
+<h1>Lista de deseados</h1>
+
 <div *ngIf="productoEnDeseados.length === 0">
-    <p>No hay productos en el carrito</p>
+    <p>No hay deseados en tu lista de deseados</p>
 </div>
-<table class="table">
-    <thead>
-        <tr>
-            <th>Imagen</th>
-            <th>Nombre</th>
-            <th>Descripcion</th>
-            <th>Precio c/u</th>
-            <th>Cantidad</th>
-            <th>Total</th>
-            <th>Acciones</th>
-        </tr>
-    </thead>
 
-    <tbody>
-        <tr *ngFor="let item of productoEnDeseados; let i = index">
-            <td><img [src]="item.producto.imagen" alt="{{ item.producto.nombre }}" style="width: 50px; height: 50px;">
-            </td>
-            <td> {{item.producto.nombre}} </td>
-            <td> {{item.producto.descripcion}} </td>
-            <td> {{item.producto.precio}} </td>
-            <td>
-                <button (click)="quitarCantidad(i)">-</button>
-                {{item.cantidad}}
-                <button (click)="agregarCantidad(i)">+</button>
-            </td>
-            <td>
-                {{item.producto.precio * item.cantidad}}
-            </td>
-            <td>
-                <button (click)="eliminarProducto(item.producto.id)">Eliminar</button>
-            </td>
-        </tr>
-    </tbody>
-
-</table>
-
-<button (click)="realizarCompra()" class="btn btn-success">Realizar Compra</button>
+<div class="card-container" style="justify-content: center;">
+    <div *ngFor="let item of productoEnDeseados; let i = index" class="card">
+        <img [src]="item.producto.imagen" alt="{{item.producto.nombre}}" class="product-image">
+        <h2>{{item.producto.nombre}}</h2>
+        <p>{{item.producto.descripcion}}</p>
+        <p>Precio:{{item.producto.precio}}</p>
+        <div class="btn-container">
+            <!-- <button type="button" class="btn btn-outline-primary"
+                style="height: 40px; width: 70%; justify-content: center; border-radius: 10px;"
+                (click)="agregarC(producto)">
+                Agregar al carrito
+            </button> -->
+        </div>
+        <button (click)="eliminarProducto(item.producto.id)">Eliminar</button>
+    </div>
+</div>

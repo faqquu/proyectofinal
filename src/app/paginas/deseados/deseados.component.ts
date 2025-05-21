@@ -1,19 +1,25 @@
-import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
+import { RouterModule } from '@angular/router';
 import { Producto } from '../../modelos/producto.models';
 import { DeseadosService } from '../../servicios/deseados.service';
-import { FormsModule } from '@angular/forms';
+import { ProductosComponent } from '../productos/productos.component';
+import { CarritoComponent } from '../carrito/carrito.component';
+import { CarritoService } from '../../servicios/carrito.service';
 
 @Component({
+  imports: [CommonModule, FormsModule, RouterModule],
   selector: 'app-deseados',
-  imports: [CommonModule, FormsModule],
   templateUrl: './deseados.component.html',
   styleUrl: './deseados.component.css'
 })
 export class DeseadosComponent implements OnInit {
   productoEnDeseados: { producto: Producto; cantidad: number;}[] = [];
 
-  constructor(private deseadosService: DeseadosService) { };
+  constructor(private deseadosService: DeseadosService, private carritoService: CarritoService) { };
+
+  Deseados: Producto[] = []
 
   ngOnInit(): void {
     this.deseadosService.deseados$.subscribe((productos) => {
@@ -44,5 +50,8 @@ export class DeseadosComponent implements OnInit {
     this.vaciarDeseados();
   }
 
-
+  agregarC(producto: Producto) {
+    this.carritoService.agregarAlCarrito(producto);
+    alert('Producto agregado al carrito'); //Muestra el mensaje
+  }
 }

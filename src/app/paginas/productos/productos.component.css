@@ -42,7 +42,7 @@ body{
 .card .btn{
     background-color: greenyellow;
     color: black;
-    border: none;
+    border: 200px black;
     transition: background 0.3s ease-in-out;
 }
 
