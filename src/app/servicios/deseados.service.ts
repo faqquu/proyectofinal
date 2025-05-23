@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
 import { Producto } from '../modelos/producto.models';
+import { CarritoService } from '../servicios/carrito.service';
 
 @Injectable({
   providedIn: 'root'
@@ -33,5 +34,10 @@ export class DeseadosService {
   }
 
   
-  constructor() { }
+  constructor(private carritoService: CarritoService) { }
+
+  agregarC(producto: Producto) {
+    this.carritoService.agregarAlCarrito(producto);
+    alert('Producto agregado al carrito'); //Muestra el mensaje
+  }
 }

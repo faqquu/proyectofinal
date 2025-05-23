@@ -19,7 +19,7 @@ export class DeseadosComponent implements OnInit {
 
   constructor(private deseadosService: DeseadosService, private carritoService: CarritoService) { };
 
-  Deseados: Producto[] = []
+
 
   ngOnInit(): void {
     this.deseadosService.deseados$.subscribe((productos) => {
