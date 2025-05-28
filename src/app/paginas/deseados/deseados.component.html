@@ -1,24 +1,18 @@
-<body>
-    
-
 <h1>Lista de deseados</h1>
-
 <div *ngIf="productoEnDeseados.length === 0">
     <p>No hay deseados en tu lista de deseados</p>
 </div>
 
-<div class="card-container" style="justify-content: center;">
+<div class="card-container">
     <div *ngFor="let item of productoEnDeseados; let i = index" class="card">
         <img [src]="item.producto.imagen" alt="{{item.producto.nombre}}" class="product-image">
         <h2>{{item.producto.nombre}}</h2>
         <p>{{item.producto.descripcion}}</p>
         <p>Precio:{{item.producto.precio}}</p>
-        <!-- <div class="btn-container">
-            <button type="button" class="btn btn-outline-primary" style="height: 40px; width: 70%; justify-content: center; border-radius: 10px;" (click)="agregarC(producto)"></button>
-        </div> -->  
+        <div class="btn-container">
+            <button type="button" class="btn btn-outline-primary" style="height: 40px; width: 70%; justify-content: center; border-radius: 10px;" (click)="agregarC(item.producto)"></button>
+        </div>  
         <button (click)="eliminarProducto(item.producto.id)">Eliminar</button>
-    </div>
+    </div> 
 </div>
 
-
-</body>

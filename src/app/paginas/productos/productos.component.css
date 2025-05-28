@@ -10,12 +10,13 @@ body{
     gap: 20px; /*Espacio entre las tarjetas*/
     flex-wrap: wrap; /*Permite que se acomoden en pantallas chicas*/
     padding: 20px;
+    
 }
 
 /*Estilos para la tarjeta*/
 .card{
     width: 18rem;
-    background-color: rgb(105, 105, 105);
+    background-color: rgb(64,64,64  );
     color: rgb(0, 0, 0);
     border-radius: 10px;
     display: flex;
@@ -30,11 +31,6 @@ body{
     box-shadow: 0px 8px 16px rgba(255, 255, 255, 0.2);
     color: rgb(255, 255, 255);
 }
-.btn:hover{
-    transform: scale(1.0);
-    box-shadow: 0px 8px 16px rgba(255, 255, 255, 0.2);
-    color: rgb(255, 255, 255);
-}
 
 /*Imagen dentro de la tarjeta*/
 .card img{
@@ -44,21 +40,17 @@ body{
 }
 
 /*Boton estilizado*/
-.card .btn{
-    background-color: rgb(78, 78, 78);
-    color: black;
-    border: 200px black;
+.btn{
+    background-color: rgb(100, 100, 100);
+    color: rgb(255, 255, 255);
+    border-width: 2px;
+    border-color: black;
     transition: background 0.3s ease-in-out;
 }
-
 
 .btn-container{
     display: flex;
     gap: 1px;
-}
-
-.card .btn-hover{
-    background-color: greenyellow;
 }
 
 

@@ -1,14 +1,8 @@
-body{
-    background-color: rgb(66, 0, 100);
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-}
-
 /*Contenedor de las tarjetas*/
 .card-container{
-    justify-content: center; /*Centra horizontalmente*/
+    justify-content: center; /*Centra horizontalmente*/    
     gap: 20px; /*Espacio entre las tarjetas*/
     flex-wrap: wrap; /*Permite que se acomoden en pantallas chicas*/
-    padding: 20px;
 }
 
 /*Estilos para la tarjeta*/
