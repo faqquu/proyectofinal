@@ -10,7 +10,7 @@
         <p>{{item.producto.descripcion}}</p>
         <p>Precio:{{item.producto.precio}}</p>
         <div class="btn-container">
-            <button type="button" class="btn btn-outline-primary" style="height: 40px; width: 70%; justify-content: center; border-radius: 10px;" (click)="agregarC(item.producto)"></button>
+            <button type="button" class="btn btn-outline-primary" style="height: 40px; width: 70%; justify-content: center; border-radius: 10px;" (click)="agregarC(item.producto)">Agregar al carrito</button>
         </div>  
         <button (click)="eliminarProducto(item.producto.id)">Eliminar</button>
     </div> 

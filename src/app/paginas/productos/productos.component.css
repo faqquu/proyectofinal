@@ -16,7 +16,7 @@ body{
 /*Estilos para la tarjeta*/
 .card{
     width: 18rem;
-    background-color: rgb(64,64,64  );
+    background-color: rgb(64,64,64);
     color: rgb(0, 0, 0);
     border-radius: 10px;
     display: flex;
@@ -46,6 +46,7 @@ body{
     border-width: 2px;
     border-color: black;
     transition: background 0.3s ease-in-out;
+    pointer-events: none; 
 }
 
 .btn-container{
@@ -60,4 +61,41 @@ body{
         flex-direction: column; /*cambia a columna*/
         align-items:center ; /*centra en pantallas chicas*/
 }
+}
+
+.css-button-sliding-to-top--green {
+  min-width: 130px;
+  height: 40px;
+  color: #fff;
+  padding: 5px 10px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+  outline: none;
+  border-radius: 5px;
+  z-index: 0;
+  background: #fff;
+  overflow: hidden;
+  border: 2px solid #57cc99;
+  color: #57cc99;
+}
+
+.css-button-sliding-to-top--green:hover {
+  color: #fff;
+}
+.css-button-sliding-to-top--green:hover:after {
+  height: 100%;
+}
+.css-button-sliding-to-top--green:after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  transition: all 0.3s ease;
+  left: 0;
+  bottom: 0;
+  height: 0;
+  width: 100%;
+  background: #57cc99;
 }

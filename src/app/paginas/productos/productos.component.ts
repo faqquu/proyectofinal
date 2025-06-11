@@ -19,19 +19,19 @@ export class ProductosComponent {
 
     {
       id: 1,
-      nombre: 'HIDEO',
-      descripcion: 'KOJIMA',
+      nombre: 'perro',
+      descripcion: 'perro',
       precio: 10,
-      imagen: 'https://preview.redd.it/variable-quality-hideo-kojima-thinking-v0-tbztklkehktc1.jpg?width=640&crop=smart&auto=webp&s=61c8fe0e3169b69829af8d919ce32160de9ecfe0',
+      imagen: './asset/dog-dance.gif',
       disponibilidad: true
     },
 
     {
       id: 2,
-      nombre: 'radio',
-      descripcion: 'head',
+      nombre: 'perro',
+      descripcion: 'perro',
       precio: 20,
-      imagen: 'https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/dd/50/c7/dd50c790-99ac-d3d0-5ab8-e3891fb8fd52/634904032463.png/1200x630bf-60.jpg',
+      imagen: './asset/dog-dance.gif',
       disponibilidad: true
     },
   

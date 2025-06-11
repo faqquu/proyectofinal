@@ -8,9 +8,10 @@
                 <p>{{producto.descripcion}}</p>
                 <p>Precio:{{producto.precio}}</p>        
                 <div class="btn-container">
-                    <button type="button" class="btn btn-outline-primary" style="height: 40px; width: 70%; justify-content: center; top: 5px;" (click)="agregarC(producto)"> 
-                       <strong> Agregar al Carrito </strong>
+                    <button type="button" class="css-button css-button-sliding-to-top css-button-sliding-to-top--green" (click)="agregarC(producto)"> 
+                        <img src="./asset/carrito.png" alt="" style="width: 25px; height: 25px;">
                     </button>
+
                     <button type="button" class="btn btnfav" style="height: 40px; width: 30%; justify-content: center; top: 5px;" (click)="agregarD(producto)">
                         <img src="./asset/deseados.png" style="height: 30px; width: 40px;">
                     </button>
@@ -19,3 +20,4 @@
             </ng-container>
     </ng-container>
 </div>
+
